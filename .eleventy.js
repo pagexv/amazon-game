@@ -15,6 +15,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addGlobalData("ads", require("./src/_data/ads"));
 
     return {
+      pathPrefix: "/amazon-game/", // For GitHub Pages subdirectory
         dir: {
           input: "src",
           includes: "_includes", // Explicitly set includes directory
