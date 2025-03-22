@@ -1,0 +1,28 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/img/uploads"
+public_folder: "/img/uploads"
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "src/blog"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Content", name: "body", widget: "markdown" }
+      - { label: "SEO Description", name: "description", widget: "text" }
+      - { label: "Tags", name: "tags", widget: "list" }
+
+  - name: "guides"
+    label: "Travel Guides"
+    folder: "src/guides"
+    create: true
+    fields:
+      - { label: "Destination", name: "destination", widget: "string" }
+      - { label: "Price Range", name: "price", widget: "select", options: ["$", "$$", "$$$"] }
+      - { label: "Content", name: "body", widget: "markdown" }

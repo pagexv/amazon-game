@@ -1,0 +1,28 @@
+{
+  "name": "amazon-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eleventy.js",
+  "scripts": {
+    "start": "npx eleventy --serve",
+    "build": "npx eleventy",
+    "deploy": "npm run build && gh-pages -d _site"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pagexv/amazon-game.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pagexv/amazon-game/issues"
+  },
+  "homepage": "https://github.com/pagexv/amazon-game#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  },
+  "dependencies": {
+    "netlify-cms-app": "^2.15.72"
+  }
+}

@@ -1,0 +1,63 @@
+---
+title: Home
+layout: layout.njk
+---
+
+<!-- Hero Section -->
+<section class="hero">
+    <div>
+        <h1>{{ site.title }}</h1>
+        <p>Curated Experiences for the Discerning Traveler</p>
+    </div>
+</section>
+
+<!-- Category Cards -->
+<div class="card-grid">
+    {% for category in collections.featuredCategories %}
+    <article class="category-card">
+        <img src="{{ category.data.image }}" alt="{{ category.data.title }}">
+        <div class="card-content">
+            <h3>{{ category.data.title }}</h3>
+            <p>{{ category.data.description }}</p>
+            <a href="{{ category.url }}">Explore</a>
+        </div>
+    </article>
+    {% endfor %}
+</div>
+
+<!-- Interactive Map -->
+<div id="map"></div>
+<script>
+    function initMap() {
+        const map = new google.maps.Map(document.getElementById("map"), {
+            center: { lat: -8.409518, lng: 115.188919 }, // Bali coordinates
+            zoom: 9,
+        });
+        
+        // Add your markers here
+        new google.maps.Marker({
+            position: { lat: -8.409518, lng: 115.188919 },
+            map,
+            title: "Luxury Resort Location",
+        });
+    }
+</script>
+<script 
+    async
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+</script>
+
+<!-- Newsletter CTA -->
+<section class="newsletter-cta">
+    <h2>Get Exclusive Travel Insights</h2>
+    <form class="newsletter-form" name="newsletter" netlify>
+        <input 
+            type="email" 
+            name="email"
+            class="newsletter-input" 
+            placeholder="Enter your email" 
+            required
+        >
+        <button type="submit" class="subscribe-btn">Subscribe</button>
+    </form>
+</section>

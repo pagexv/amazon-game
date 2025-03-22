@@ -1,0 +1,11 @@
+<!-- src/_includes/ad-unit.njk -->
+<div class="ad-container">
+    <ins class="adsbygoogle"
+        style="display:block; {{ style | default('') | safe }}"
+        data-ad-client="ca-pub-{{ client | default('YOUR_CLIENT_ID') }}"
+        data-ad-slot="{{ slot | default('DEFAULT_SLOT_ID') }}"
+        data-ad-format="{{ format | default('auto') }}"
+        data-full-width-responsive="{{ responsive | default('true') }}">
+    </ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>

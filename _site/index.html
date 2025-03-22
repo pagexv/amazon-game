@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- AdSense Header Code -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_AD_CLIENT_ID"
+    crossorigin="anonymous"></script>
+    
+    <!-- Responsive Ad Unit (Header) -->
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-YOUR_AD_CLIENT_ID"
+        data-ad-slot="HEADER_AD_SLOT_ID"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+     <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <!-- In-Article Ad (After 2nd Paragraph) -->
+    <article>
+        
+<!-- Hero Section -->
+<section class="hero">
+    <div>
+        <h1>Luxury Wellness & Culture Guides</h1>
+        <p>Curated Experiences for the Discerning Traveler</p>
+    </div>
+</section>
+
+<!-- Category Cards -->
+<div class="card-grid">
+    
+</div>
+
+<!-- Interactive Map -->
+<div id="map"></div>
+<script>
+    function initMap() {
+        const map = new google.maps.Map(document.getElementById("map"), {
+            center: { lat: -8.409518, lng: 115.188919 }, // Bali coordinates
+            zoom: 9,
+        });
+        
+        // Add your markers here
+        new google.maps.Marker({
+            position: { lat: -8.409518, lng: 115.188919 },
+            map,
+            title: "Luxury Resort Location",
+        });
+    }
+</script>
+<script 
+    async
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+</script>
+
+<!-- Newsletter CTA -->
+<section class="newsletter-cta">
+    <h2>Get Exclusive Travel Insights</h2>
+    <form class="newsletter-form" name="newsletter" netlify>
+        <input 
+            type="email" 
+            name="email"
+            class="newsletter-input" 
+            placeholder="Enter your email" 
+            required
+        >
+        <button type="submit" class="subscribe-btn">Subscribe</button>
+    </form>
+</section>
+        <div class="ad-unit">
+            <ins class="adsbygoogle"
+                style="display:block; text-align:center;"
+                data-ad-layout="in-article"
+                data-ad-format="fluid"
+                data-ad-client="ca-pub-YOUR_AD_CLIENT_ID"
+                data-ad-slot="IN_ARTICLE_AD_SLOT_ID"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </article>
+
+    <!-- Sidebar Ad (Desktop Only) -->
+    <aside class="sidebar">
+        <ins class="adsbygoogle"
+            style="display:inline-block;width:300px;height:600px"
+            data-ad-client="ca-pub-YOUR_AD_CLIENT_ID"
+            data-ad-slot="SIDEBAR_AD_SLOT_ID"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </aside>
+</body>
+</html>
